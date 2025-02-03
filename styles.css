@@ -1,32 +1,33 @@
 /*  your css code here. If applicable */
 .star {
+  position: relative;
+  display: inline-block; /* Needed for proper sizing */
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 100px solid yellow; /* Yellow color */
-  position: relative;
-  transform: rotate(-35deg); /* Adjust rotation for desired angle */
+  border-bottom: 35px solid yellow; /* Adjust for height */
+  border-left: 50px solid transparent;
+  transform: rotate(35deg); /* Initial rotation */
 }
 
 .star::before {
-  content: "";
   position: absolute;
-  top: -30px;
-  left: -58px;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 70px solid yellow; /* Yellow color */
-  transform: rotate(-70deg);
+  top: -45px; /* Adjust for overlap */
+  left: -35px; /* Adjust for centering */
+  content: "";
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 70px solid yellow; /* Double the height */
+  transform: rotate(-70deg); /* Corrected rotation */
 }
 
 .star::after {
-  content: "";
   position: absolute;
-  top: -30px;
-  left: -58px;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 70px solid yellow; /* Yellow color */
-  transform: rotate(70deg);
+  top: -45px; /* Adjust for overlap */
+  left: -35px; /* Adjust for centering */
+  content: "";
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 70px solid yellow; /* Double the height */
+  transform: rotate(70deg); /* Corrected rotation */
 }
