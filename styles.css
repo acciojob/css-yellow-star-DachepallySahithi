@@ -1,1 +1,32 @@
 /*  your css code here. If applicable */
+.star {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid yellow; /* Yellow color */
+  position: relative;
+  transform: rotate(-35deg); /* Adjust rotation for desired angle */
+}
+
+.star::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -58px;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 70px solid yellow; /* Yellow color */
+  transform: rotate(-70deg);
+}
+
+.star::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -58px;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 70px solid yellow; /* Yellow color */
+  transform: rotate(70deg);
+}
